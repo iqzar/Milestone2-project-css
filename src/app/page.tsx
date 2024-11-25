@@ -19,7 +19,7 @@ export default function Home() {
           <div className={styles.hero}>
             <Image className={styles.dp} src={dp} width={100} height={100} alt="Profile Picture" />
             <h1 className={styles.title}>
-            "Transforming ideas <br /> into responsive, pixel-perfect <br /> digital solutions."
+            Transforming ideas <br /> into responsive, pixel-perfect <br /> digital solutions.
             </h1>
 
             <button className={styles.bbtn}>Latest work</button>

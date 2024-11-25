@@ -1,6 +1,5 @@
 
 import { faCircleLeft } from '@fortawesome/free-solid-svg-icons';
-import Link from 'next/link';
 import styles from '../styles/Contact.module.css'; // Import the CSS module
 
 export default function ContactUs() {
