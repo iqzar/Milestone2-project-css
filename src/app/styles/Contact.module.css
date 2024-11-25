@@ -1,0 +1,122 @@
+/* ContactUs.module.css */
+
+.bgBlack {
+    background-color: black;
+}
+
+.icon {
+    height: 32px;
+    width: 32px;
+    color: #1cc2ba; /* Tailwind's text-teal-50 */
+    padding-top: 12px;
+    padding-left: 80px;
+}
+
+.flexCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 16px;
+    background-color: #f0f8ff; /* Tailwind's bg-white-100 */
+}
+
+.heading {
+    font-size: 1.875rem; /* text-3xl */
+    color: black;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.form {
+    background-color: transparent;
+    opacity: 90%;
+    border: 2px solid #aad6ba; /* border-green-200 */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+    padding: 24px 32px 32px;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 28rem; /* max-w-md */
+}
+
+.formGroup {
+    margin-bottom: 16px;
+}
+
+.label {
+    display: block;
+    color: black;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.input,
+.textarea {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05); /* shadow */
+    border: 1px solid #d1d5db; /* border-gray-300 */
+    border-radius: 0.25rem; /* rounded */
+    width: 100%;
+    padding: 8px 12px;
+    color: #374151; /* text-gray-700 */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 2px rgba(59, 130, 246, 0.5); /* focus:shadow-outline */
+}
+
+.textarea {
+    height: 4rem; /* Adjusted height */
+    resize: vertical;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.button {
+    background-color: transparent;
+    color: black;
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 600;
+    height: 32px;
+    width: 96px;
+    border: 1px solid #86efac; /* border-green-200 */
+    background-color: #86efac; /* bg-green-200 */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.button:hover {
+    background-color: #1e293b; /* hover:bg-slate-900 */
+    border-color: #1e293b;
+}
+
+.endline {
+  
+    margin-top: 100px;
+    width:900px;
+    height: 1px; /* Adjust line thickness */
+    background-color: gainsboro; /* Line color */
+  }
+
+.footer{
+    background-color: #f0f8ff;
+    margin-top: 10px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
