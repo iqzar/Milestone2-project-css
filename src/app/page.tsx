@@ -5,7 +5,7 @@ import styles from './styles/Home.module.css';
 import Link from "next/link";
 import dp from './public/dp.png';
 import deal from './public/deal.jpg';
-import { X , AppWindow, LayoutTemplate,FolderCode, ImagePlus  } from 'lucide-react';
+import { AppWindow, LayoutTemplate,FolderCode, ImagePlus  } from 'lucide-react';
 
 export default function Home() {
  
