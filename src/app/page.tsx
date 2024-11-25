@@ -12,6 +12,7 @@ export default function Home() {
 
   return (
     <>
+     
       <div className={styles.main}>
         <div className={styles.container}>
          
@@ -22,7 +23,7 @@ export default function Home() {
             Transforming ideas <br /> into responsive, pixel-perfect <br /> digital solutions.
             </h1>
 
-            <button className={styles.bbtn}>Latest work</button>
+            <Link href='https://github.com/iqzar'><button className={styles.bbtn}>Latest work</button></Link>
           </div>
         </div>
       </div>
@@ -100,8 +101,8 @@ audience.</p>
         </h1>
 
         <div className={styles.btns}> 
-        <div><button className={styles.w1btn} >Email</button></div>
-      
+       
+        <Link href={'mailto:iqraa7191@gmail.com'}> <div><button className={styles.w1btn} >Email</button></div></Link>
         <div><button className={styles.b1btn} >Whatsapp</button></div>
         </div> 
 
@@ -111,9 +112,9 @@ audience.</p>
         <div className={styles.footer}>
         <p className={styles.text1}>All the copyright reserved 2024</p>
         <div className={styles.links}>
-        <Link className={styles.text1} href={'/'}><p>linkedIn /</p></Link>
-        <Link className={styles.text1} href={'/'}><p>github /</p></Link>
-        <Link className={styles.text1} href={'/'}><p>gmail</p></Link>
+        <Link className={styles.text1} href={'https://www.linkedin.com/in/iqra-ali-0972a7179/'}><p>linkedIn /</p></Link>
+        <Link className={styles.text1} href={'https://github.com/iqzar'}><p>github /</p></Link>
+        <Link className={styles.text1} href={'mailto:iqraa7191@gmail.com'}><p>gmail</p></Link>
         </div>
       </div>
       </div>

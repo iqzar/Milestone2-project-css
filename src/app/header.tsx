@@ -1,34 +1,64 @@
-'use client'
+'use client';
 
-import styles from './styles/Home.module.css';
 import Link from 'next/link';
-import React, { useState } from "react";
-import { X } from 'lucide-react';
+import React, { useState } from 'react';
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "../components/ui/sheet";
 
-export default function Header(){
-    const [menuOpen, setMenuOpen] = useState(false);
+// Import CSS module
+import styles from './styles/Header.module.css';
 
-    const toggleMenu = () => setMenuOpen(!menuOpen);
-    return(
-        <main className={styles.container0}>
-             <div className={styles.header}>
-            <p className={styles.text1}>
-              iqra khizar <span>|</span> front-end developer
-            </p>
+export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-            {/* Menu Toggle Button */}
-            <button className={styles.menuToggle} onClick={toggleMenu}>
-              {menuOpen ? <X size={12} /> : "☰"}
+  // Close the menu when a link is clicked
+  const handleLinkClick = () => setMenuOpen(false);
+
+  return (
+    <header className={styles.header}>
+      <p className={styles.headerTitle}>
+        iqra khizar <span className={styles.divider}>|</span> front-end developer
+      </p>
+
+      {/* Full Navigation for Large Screens */}
+      <nav className={`${styles.nav} ${styles.largeScreen}`}>
+        <Link href="/" className={styles.navLink}>
+          Home
+        </Link>
+        <Link href="/About" className={styles.navLink}>
+          About
+        </Link>
+        <Link href="/Contact" className={styles.navLink}>
+          Contact
+        </Link>
+      </nav>
+
+      {/* Hamburger Menu for Small Screens */}
+      <div className={styles.menuContainer}>
+        <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
+          <SheetTrigger asChild>
+            <button className={styles.menuToggle} onClick={() => setMenuOpen(true)}>
+              ☰
             </button>
-
-            {/* Navigation Links */}
-            <div className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}>
-              <div><Link className={styles.text1} href={'/'}>home </Link></div>
-              <div><Link className={styles.text1} href={'/About'}>about </Link></div>
-              <div><Link className={styles.text1} href={'/Contact'}>contact</Link></div>
-            </div>
-          </div>
-
-        </main>
-    )
+          </SheetTrigger>
+          <SheetContent side="right" className={styles.sheetContent}>
+            <nav className={`${styles.nav} ${styles.smallScreen}`}>
+              <Link href="/" className={styles.navLink} onClick={handleLinkClick}>
+                Home
+              </Link>
+              <Link href="/About" className={styles.navLink} onClick={handleLinkClick}>
+                About
+              </Link>
+              <Link href="/Contact" className={styles.navLink} onClick={handleLinkClick}>
+                Contact
+              </Link>
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </div>
+    </header>
+  );
 }
